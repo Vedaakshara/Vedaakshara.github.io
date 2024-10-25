@@ -1,6 +1,22 @@
-\89PNG
-
-\00\00\00
-IHDR\00\00\00\E2\00\00\00\E2\00\00\00\DCr\8C\80\00\00\00	pHYs\00\00\C4\00\00\C4\95+\00\00\80IDATx\9C\EDܱ
-B1\C13\FD\F7l
-\80\E4\EB\B4b\A6\00낕\C37\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00s\B6Xv\EF\DD>a\D39\8D\00^\DB\C0w2%@\A6Ȕ\00\99 SdJ\80L	\90)2%@\A6Ȕ\00\99 SdJ\80L	\90)2%@\A6Ȕ\00\99 SdJ\80L	\90)2%@\A64&\84>\FEy\EF\A92\F6\F4\BF)2%@\A6Ȕ\00\99 SdJ\80L	\90)2%@\A6Ȕ\00\99 SdJ\80L	\90)2%@\A6Ȕ\00\99 SdJ\80L	\90)2%@\A6\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\C0\CE\F6\FC\E4\DE\FBĳ\E74\B0\C8G\80L	\90)2%@\A6Ȕ\00\99 SdJ\80L	\90)2%@\A6Ȕ\00\99 SdJ\80L	\90)2%@\A6Ȕ\00\99 SdJ\80L	\90)2\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00`f\DE\DB	\A8\A5(\00\00\00\00IEND\AEB`\82
+!doctype HTML>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    </head>
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    
+    <body style='margin : 0px; overflow: hidden;'>
+        <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
+        <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 4x4;'>
+
+        <a-marker type='barcode' value='127'>
+            <a-sphere position='0 1 0' color="green"></a-sphere>
+        </a-marker>
+    
+        <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
+        <a-entity camera></a-entity>
+        </a-scene>
+    </body>
+</html>
